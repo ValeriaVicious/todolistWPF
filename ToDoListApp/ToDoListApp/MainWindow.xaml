@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoListApp"
         mc:Ignorable="d"
-        Title="Список дел Валерии Вишес" Height="450" Width="800" FontFamily="Palatino Linotype" Visibility="Visible" Loaded="Window_Loaded" Icon="brainstorming_brain_idea_lightbulb_light_icon_193974.ico">
+        Title="Список дел" Height="450" Width="800" FontFamily="Palatino Linotype" Visibility="Visible" Loaded="Window_Loaded" Icon="brainstorming.ico">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
