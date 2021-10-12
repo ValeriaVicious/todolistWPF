@@ -5,12 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ToDoListApp"
         mc:Ignorable="d"
-        Title="Список дел Валерии Вишес" Height="450" Width="800">
+        Title="Список дел Валерии Вишес" Height="450" Width="800" FontFamily="Palatino Linotype" Visibility="Visible" Loaded="Window_Loaded" Icon="brainstorming_brain_idea_lightbulb_light_icon_193974.ico">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="#FFFF38FF" Offset="0.796"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="9*"/>
-            <ColumnDefinition Width="13*"/>
-        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="DataGridToDoList" FontSize="20" FontStyle="Italic" Margin="20" AutoGenerateColumns="False" HorizontalGridLinesBrush="Black" VerticalGridLinesBrush="Black" AlternatingRowBackground="#FFE99CFF" AlternationCount="1">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0"/>
+                    <GradientStop Color="#FFE795FF" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path= CreationDate}" IsReadOnly="True" Header="Date" Width="165"/>
+                <DataGridCheckBoxColumn Binding="{Binding Path= IsDone, UpdateSourceTrigger = PropertyChanged}"  IsReadOnly="False" Header="Done" Width="80"/>
+                <DataGridTextColumn Binding="{Binding Path=Text}" IsReadOnly="False" Header="Tasks" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
