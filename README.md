@@ -1,4 +1,4 @@
-# todolistWPF
+# TodolistWPF
 
 Классическое приложение "Список дел" выполнено при помощи технологии WPF.
 ![todoList](https://user-images.githubusercontent.com/59263802/136896036-58187441-0e49-41da-bb9d-04a21c84669e.gif)
